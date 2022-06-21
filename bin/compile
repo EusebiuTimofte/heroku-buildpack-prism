@@ -18,6 +18,8 @@ if ! [ -e "$CACHE_DIR/$FILENAME" ]; then
   curl $URL -s -Lo "$CACHE_DIR/$FILENAME"
 fi
 
+curl -SsL https://downloads.gauge.org/stable | sh
+
 cp "$CACHE_DIR/$FILENAME" "$BUILD_DIR/vendor/prism/bin/prism"
 chmod +x "$BUILD_DIR/vendor/prism/bin/prism"
 
